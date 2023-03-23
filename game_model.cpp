@@ -14,5 +14,13 @@ void game_model::add_points(int p) {
 }
 
 int game_model::add_levels(int d) {
-    return int(d/50)+1;
+    int level=0;
+    int pom=0;
+    for(int i=0; i<d; i+=50)
+    {
+        level++;
+        i+=pom;
+        pom+=50;
+    }
+    return level;
 }

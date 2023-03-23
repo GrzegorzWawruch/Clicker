@@ -13,7 +13,8 @@ public:
         void show_level(int l);
         void show_title();
         void show_points(int v);
-        void show_clicker_update();
+        void show_clicker_update(int click);
+        void show_win();
 
 
 };

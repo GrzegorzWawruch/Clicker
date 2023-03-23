@@ -14,9 +14,6 @@ public:
     int add_levels(int d);
     int points;
 
-private:
-
-
 
 };
 
