@@ -12,3 +12,7 @@ void game_model::add_points(int p) {
     this->points +=p;
 
 }
+
+int game_model::add_levels(int d) {
+    return int(d/50)+1;
+}
