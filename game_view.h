@@ -14,6 +14,7 @@ public:
         void show_title();
         void show_points(int v);
         void show_clicker_update();
+        void show_win();
 
 
 };

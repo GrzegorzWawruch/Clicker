@@ -25,10 +25,15 @@ void game_controller::launch()
             if (per_click == 1)
             {
                 this->update();
+
             }
             if (per_click == 2)
             {
                 this->update_2();
+            }
+            if (per_click == 4)
+            {
+                this->update_3();
             }
 
         }
@@ -60,12 +65,40 @@ void game_controller::update() {
 }
 
 void game_controller::update_2() {
+    int update_key;
     this->model.add_points( 2);
     system( "cls");
     this->view.show_title();
     this->view.show_points(this->model.get_points());
     this->view.show_level(this->model.add_levels(this->model.get_points()));
+    if(this->model.get_points() > 500 )
+    {
+        update_key = _getch();
+        this->view.show_clicker_update();
+        update_key = _getch();
+        if (update_key == 103 )
+        {
+            per_click = 4;
+            system( "cls");
+            this->model.points=0;
+            this->model.level=1;
+        }
+
+    }
+}
+
+void game_controller::update_3() {
+    this->model.add_points( 4);
+    system( "cls");
+    this->view.show_title();
+    this->view.show_points(this->model.get_points());
+    this->view.show_level(this->model.add_levels(this->model.get_points()));
+    if(this->model.get_points() > 1000 )
+    {
+        system( "cls");
+        this->view.show_win();
+    }
 
 }
-//[przenies to co widzi uzytkownik do klasy game view]
+
 

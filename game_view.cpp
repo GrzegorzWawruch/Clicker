@@ -23,3 +23,13 @@ void game_view::show_clicker_update() {
  cout<< " Good job, you have many point and you can change it for manys points per click. If you want do this press g"<<endl;
 }
 
+void game_view::show_win() {
+    cout<< "\t ***************************************"<<endl;
+    cout<< "\t *                                     *"<<endl;
+    cout<< "\t *  Congratulations you win this game  *"<<endl;
+    cout<< "\t *                                     *"<<endl;
+    cout<< "\t ***************************************"<<endl;
+}
+
+
+
