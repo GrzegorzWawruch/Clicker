@@ -43,15 +43,14 @@ void game_controller::launch()
 
 void game_controller::update() {
     int update_key;
-
+    this->model.add_points( 1);
     system( "cls");
     this->view.show_title();
     this->view.show_points(this->model.get_points());
     this->view.show_level(this->model.add_levels(this->model.get_points()));
-    this->model.add_points( 1);
     if(this->model.get_points() > 150 )
     {
-        this->view.show_clicker_update(per_click*2);
+        this->view.show_clicker_update();
         update_key = _getch();
         if (update_key == 103 )
         {
@@ -67,14 +66,15 @@ void game_controller::update() {
 
 void game_controller::update_2() {
     int update_key;
+    this->model.add_points( 2);
     system( "cls");
     this->view.show_title();
     this->view.show_points(this->model.get_points());
     this->view.show_level(this->model.add_levels(this->model.get_points()));
-    this->model.add_points( 2);
     if(this->model.get_points() > 500 )
     {
-        this->view.show_clicker_update(per_click*2);
+        update_key = _getch();
+        this->view.show_clicker_update();
         update_key = _getch();
         if (update_key == 103 )
         {
@@ -88,11 +88,11 @@ void game_controller::update_2() {
 }
 
 void game_controller::update_3() {
+    this->model.add_points( 4);
     system( "cls");
     this->view.show_title();
     this->view.show_points(this->model.get_points());
     this->view.show_level(this->model.add_levels(this->model.get_points()));
-    this->model.add_points( 4);
     if(this->model.get_points() > 1000 )
     {
         system( "cls");
