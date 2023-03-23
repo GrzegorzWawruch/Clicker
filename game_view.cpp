@@ -19,3 +19,7 @@ void game_view::show_points(int v) {
     cout<<"Points: "<< v <<endl;
 }
 
+void game_view::show_clicker_update() {
+ cout<< " Good job, you have many point and you can change it for manys points per click. If you want do this press g"<<endl;
+}
+

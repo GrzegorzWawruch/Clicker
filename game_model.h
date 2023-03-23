@@ -12,11 +12,11 @@ public:
     void add_points(int p);
     int level = 1;
     int add_levels(int d);
-
+    int points;
 
 private:
 
-    int points;
+
 
 };
 
